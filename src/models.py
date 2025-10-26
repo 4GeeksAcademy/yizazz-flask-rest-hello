@@ -10,6 +10,8 @@ class User(db.Model):
     password: Mapped[str] = mapped_column(nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean(), nullable=False)
 
+class follower(db.model):
+    id: Mapped[int]
 
     def serialize(self):
         return {
